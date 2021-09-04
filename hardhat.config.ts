@@ -1,8 +1,10 @@
 import { HardhatUserConfig } from 'hardhat/config';
 import '@nomiclabs/hardhat-waffle';
 import '@nomiclabs/hardhat-ethers';
+import '@nomiclabs/hardhat-etherscan';
 import 'hardhat-typechain';
 import 'hardhat-deploy';
+require('dotenv').config();
 
 // You have to export an object to set up your config
 // This object can have the following optional entries:
@@ -20,6 +22,23 @@ const config: HardhatUserConfig = {
         },
       },
     ],
+  },
+  networks: {
+    rinkeby: {
+      chainId: 4,
+      url: 'https://eth-rinkeby.alchemyapi.io/v2/' + process.env.ALCHEMY_KEY,
+      timeout: 1000 * 60,
+    },
+    bsc_testnet: {
+      chainId: 97,
+      url: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+      timeout: 1000 * 60,
+    },
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: process.env.SCAN_KEY,
   },
 };
 
