@@ -21,7 +21,8 @@
     "build:contracts": "yarn compile && yarn typechain",
     "build:package": "rimraf ./dist && tsc && cp typechain/*.d.ts dist/typechain && cp -R addresses dist && cp -R artifacts/contracts dist/artifacts && cp -R contracts dist",
     "chain": "ganache-cli --networkId 50 --accounts 20 -e 10000000000 -l 10000000 -m 'concert load couple harbor equip island argue ramp clarify fence smart topic'",
-    "watch": "ts-node scripts/watch.ts"
+    "watch": "ts-node scripts/watch.ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "ethers": "^5.0.19"
