@@ -6,6 +6,9 @@ The protocol aims to provide a universal value system for media.
 
 Further documentation is available at [zora.engineering](https://zora.engineering)
 
+- Market deployed at: 0xa664eA4b6489855f5691869a2F2049570aa6E75b
+- Media deployed at: 0xC7131630903D9ACc36D940045f50CD85b748AcC6
+
 ## Table of Contents
 
 - [Whitepaper](#whitepaper)
